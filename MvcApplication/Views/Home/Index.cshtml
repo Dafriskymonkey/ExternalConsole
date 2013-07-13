@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="container">
+    <ul id="discussion">
+    </ul>
+    <form id="submitExecute" action="/Execute" method="post">
+        <input type="submit" id="execute" value="Execute" />
+
+        @*here we set some hidden values that will be passed to the execute controller 
+        in order to avoid hardcoding*@
+       
+        <input type="hidden" name="requestUrl" value="@Request.Url"/>
+       
+        <input type="hidden" name="messengerPath" 
+            value="@MvcApplication.App_Start.Globals.messengerPath"/>
+        <input type="hidden" name="messengerName" 
+            value="@MvcApplication.App_Start.Globals.messengerName"/>
+        <input type="hidden" name="consoleAppPath" 
+            value="@MvcApplication.App_Start.Globals.consoleAppPath"/>
+        <input type="hidden" name="consoleAppName" 
+            value="@MvcApplication.App_Start.Globals.consoleAppName"/>
+    </form>
+</div>
+
+@section scripts {
+    <script src="~/signalr/hubs"></script>
+    <!--SignalR script to update the chat page and send messages.-->
+    <script>
+        $(function () {
+            // Reference the auto-generated proxy for the hub.  
+            var comm = $.connection.communicationHub;
+            // Create a function that the hub can call back to display messages.
+            comm.client.addNewMessageToPage = function (message) {
+                // Add the message to the page. 
+                $('#discussion').append('<li>' + htmlEncode(message) + '</li>');
+            };
+            // Set initial focus to message input box.  
+            $('#message').focus();
+            // Start the connection.
+            $.connection.hub.start().done(function () {
+
+                $('#submitExecute').submit(function (e) {
+
+                    // disabling the execute button
+                    $('#execute').attr("disabled", true);
+
+                    // prevent from redirecting to action form
+                    e.preventDefault();
+
+                    var $form = $(this);
+
+                    var options = {
+                        url: $form.attr('action'),
+                        type: $form.attr('method'),
+                        data: $form.serializeArray()
+                    }
+                    //make the ajax call
+                    $.ajax(options).always(function () {
+                        // enabling the execute button
+                        $('#execute').attr("disabled", false);
+                    });
+                });
+            });
+        });
+        // This optional function html-encodes messages for display in the page.
+        function htmlEncode(value) {
+            var encodedValue = $('<div />').text(value).html();
+            return encodedValue;
+        }
+    </script>
+}

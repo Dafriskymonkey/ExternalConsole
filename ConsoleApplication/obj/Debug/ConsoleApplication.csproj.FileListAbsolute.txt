@@ -1,0 +1,6 @@
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication\ConsoleApplication\bin\Debug\ConsoleApplication.exe.config
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication\ConsoleApplication\bin\Debug\ConsoleApplication.exe
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication\ConsoleApplication\obj\Debug\ConsoleApplication.exe
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication\ConsoleApplication\obj\Debug\ConsoleApplication.pdb
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication\ConsoleApplication\obj\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache
