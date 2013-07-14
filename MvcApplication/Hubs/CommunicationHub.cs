@@ -14,13 +14,13 @@ namespace MvcApplication.Hubs
         public void Send(string message)
         {
             // Call the addNewMessageToPage method to update clients.
-            Clients.All.addNewMessageToPage(message);
+            Clients.All.printMessage(message);
         }
 
         public void SendToGroup(string groupname, string message)
         {
             // call the addMessage method for clients in the group named groupname 
-            Clients.Group(groupname).addMessage(message);
+            Clients.Group(groupname).printMessage(message);
         }
 
         public Task JoinGroup(string groupName)

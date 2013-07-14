@@ -15,7 +15,7 @@ namespace Messenger
     {
         public static void Main(string[] args)
         {
-            if (args.Length > 2)
+            if (args.Length > 3)
             {
                 // retrieve the request.url from the list of args
                 string requestUrl = args[0];
@@ -29,17 +29,21 @@ namespace Messenger
                 // Start the connection
                 hubConnection.Start().Wait();
 
+                // join the group sent by the client
+                string groupname = args[1];
+                comm.Invoke("JoinGroup", groupname);
+
                 // create a new procees
                 Process p = new Process();
 
                 // here we get the app physical path trough the arguments list, then we decode it
-                string workingDirectory = System.Net.WebUtility.UrlDecode(args[1]);
+                string workingDirectory = System.Net.WebUtility.UrlDecode(args[2]);
 
                 // define process working directory
                 p.StartInfo.WorkingDirectory = workingDirectory;
 
                 // define process filename based on process working directory
-                p.StartInfo.FileName = workingDirectory + args[2];
+                p.StartInfo.FileName = workingDirectory + args[3];
 
                 // we force to not execute in a shell
                 p.StartInfo.UseShellExecute = false;
@@ -62,7 +66,7 @@ namespace Messenger
                     if (line == null) break;
 
                     // send the output to the mvc app
-                    comm.Invoke("Send",line).Wait();
+                    comm.Invoke("SendToGroup", groupname, line).Wait();
                 }
 
                 // wait for the process to exit

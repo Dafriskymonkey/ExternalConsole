@@ -8,3 +8,12 @@ C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplicat
 C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication\Messenger\obj\Debug\Messenger.exe
 C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication\Messenger\obj\Debug\Messenger.pdb
 C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication\Messenger\obj\Debug\Messenger.csprojResolveAssemblyReference.cache
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication - 02\Messenger\bin\Debug\Messenger.exe.config
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication - 02\Messenger\bin\Debug\Messenger.exe
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication - 02\Messenger\bin\Debug\Messenger.pdb
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication - 02\Messenger\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication - 02\Messenger\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication - 02\Messenger\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication - 02\Messenger\bin\Debug\Newtonsoft.Json.xml
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication - 02\Messenger\obj\Debug\Messenger.exe
+C:\Users\DaFriskyMonkey\Documents\Visual Studio 2012\Projects\github\MvcApplication - 02\Messenger\obj\Debug\Messenger.pdb
